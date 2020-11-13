@@ -1,4 +1,6 @@
 const events = require('events')
+var eventEmitter = require('events')
+var myEmitter = new eventEmitter()
 
 function empty() {
     var eventEmitter = new events.EventEmitter();
@@ -7,11 +9,6 @@ function empty() {
 }
 
 module.exports = empty()
-
-var eventEmitter = require('events')
-var myEmitter = new eventEmitter()
-
-
 
 myEmitter.on('NewFellow', (name) => console.log(`here come's a new pirate ->> ${name}`) )
 
