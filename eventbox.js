@@ -8,8 +8,6 @@ function empty() {
     eventEmitter.emit('hi');
 }
 
-module.exports = empty()
-
 myEmitter.on('NewFellow', (name) => console.log(`here come's a new pirate ->> ${name}`) )
 
 function withArgs (names) {
@@ -25,3 +23,8 @@ withArgs([
     'Sanji',
     'Ch0pper'
 ])
+
+module.exports = {
+    empty,
+    withArgs
+} 
